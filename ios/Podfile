@@ -15,8 +15,13 @@ if linkage != nil
 end
 
 target 'demoapp' do
+  use_frameworks!
+  use_modular_headers!
   config = use_native_modules!
-
+  pod 'HealthFeedSDK', :path => '/Users/wellness360/Desktop/Workspace/hf-ios-sdk/.'
+  #pod 'ReactNativeNavigation', :path => '../node_modules/react-native-navigation'
+  #pod 'CocoaLumberjack/Swift'
+  #pod 'AFOAuth2Manager'
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
